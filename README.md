@@ -1,6 +1,5 @@
 
-
-[![Site preview](/public/site-preview.png)](https://suhas.site)
+\
 
 My design portfolio to showcase a few projects. Built with [Remix](https://remix.run/), [Three.js](https://threejs.org/), and [Framer Motion](https://www.framer.com/motion/). View the [live site](https://suhas.site) or check out a live version of the [components storybook](https://storybook.suhas.site).
 
