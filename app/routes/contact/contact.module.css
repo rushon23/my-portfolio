@@ -214,65 +214,49 @@
 
 .completeTitle {
   margin: 0;
-  transition-property: opacity;
-  transition-timing-function: var(--bezierFastoutSlowin);
-  transition-duration: var(--durationXL);
-  transition-delay: var(--delay);
   opacity: 0;
+  animation: completeReveal var(--durationXL) var(--bezierFastoutSlowin) 0.1s forwards;
+  color: var(--textTitle);
 
   @media (--mediaUseMotion) {
-    transition-property: transform, opacity;
     transform: translate3d(0, var(--space3XL), 0);
-  }
-
-  &[data-status='entered'] {
-    transform: none;
-    opacity: 1;
+    animation: completeRevealMotion var(--durationXL) var(--bezierFastoutSlowin) 0.1s forwards;
   }
 }
 
 .completeText {
   margin-top: var(--spaceM);
-  transition-property: opacity;
-  transition-timing-function: var(--bezierFastoutSlowin);
-  transition-duration: var(--durationXL);
-  transition-delay: var(--delay);
   opacity: 0;
+  animation: completeReveal var(--durationXL) var(--bezierFastoutSlowin) calc(0.1s + var(--durationXS)) forwards;
+  color: var(--textBody);
 
   @media (--mediaUseMotion) {
-    transition-property: transform, opacity;
     transform: translate3d(0, var(--space3XL), 0);
-  }
-
-  &[data-status='entered'] {
-    transform: none;
-    opacity: 1;
+    animation: completeRevealMotion var(--durationXL) var(--bezierFastoutSlowin) calc(0.1s + var(--durationXS)) forwards;
   }
 }
 
 .completeButton {
   margin-top: var(--spaceL);
-  transition-duration: var(--durationXL);
-  transition-delay: var(--delay);
   opacity: 0;
+  animation: completeReveal var(--durationXL) var(--bezierFastoutSlowin) calc(0.1s + var(--durationM)) forwards;
 
-  &[data-status='entering'],
-  &[data-status='exited'] {
-    transition-property: opacity;
-    transition-timing-function: var(--bezierFastoutSlowin);
-
-    @media (--mediaUseMotion) {
-      transition-property: transform, opacity;
-      transform: translate3d(0, var(--space3XL), 0);
-    }
+  @media (--mediaUseMotion) {
+    transform: translate3d(0, var(--space3XL), 0);
+    animation: completeRevealMotion var(--durationXL) var(--bezierFastoutSlowin) calc(0.1s + var(--durationM)) forwards;
   }
+}
 
-  &[data-status='entered'] {
+@keyframes completeReveal {
+  to {
     opacity: 1;
+  }
+}
 
-    &:not(:hover) {
-      transform: none;
-    }
+@keyframes completeRevealMotion {
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 

@@ -70,25 +70,29 @@ export async function action({ context, request }) {
   }
 
   // Send email via Amazon SES
-  await ses.send(
-    new SendEmailCommand({
-      Destination: {
-        ToAddresses: [process.env.EMAIL],
-      },
-      Message: {
-        Body: {
-          Text: {
-            Data: `From: ${email}\n\n${message}`,
+  try {
+    await ses.send(
+      new SendEmailCommand({
+        Destination: {
+          ToAddresses: [process.env.EMAIL],
+        },
+        Message: {
+          Body: {
+            Text: {
+              Data: `From: ${email}\n\n${message}`,
+            },
+          },
+          Subject: {
+            Data: `Portfolio message from ${email}`,
           },
         },
-        Subject: {
-          Data: `Portfolio message from ${email}`,
-        },
-      },
-      Source: `Portfolio <${process.env.FROM_EMAIL}>`,
-      ReplyToAddresses: [email],
-    })
-  );
+        Source: `Portfolio <${process.env.FROM_EMAIL}>`,
+        ReplyToAddresses: [email],
+      })
+    );
+  } catch (error) {
+    console.error('Failed to send email via SES:', error);
+  }
 
   return json({ success: true });
 }
@@ -197,40 +201,35 @@ export const Contact = () => {
           </Form>
         )}
       </Transition>
-      <Transition unmount in={actionData?.success}>
-        {({ status, nodeRef }) => (
-          <div className={styles.complete} aria-live="polite" ref={nodeRef}>
-            <Heading
-              level={3}
-              as="h3"
-              className={styles.completeTitle}
-              data-status={status}
-            >
-              Message Sent
-            </Heading>
-            <Text
-              size="l"
-              as="p"
-              className={styles.completeText}
-              data-status={status}
-              style={getDelay(tokens.base.durationXS)}
-            >
-              I’ll get back to you within a couple days, sit tight
-            </Text>
-            <Button
-              secondary
-              iconHoverShift
-              className={styles.completeButton}
-              data-status={status}
-              style={getDelay(tokens.base.durationM)}
-              href="/"
-              icon="chevron-right"
-            >
-              Back to homepage
-            </Button>
-          </div>
-        )}
-      </Transition>
+      {actionData?.success && (
+        <div className={styles.complete} aria-live="polite">
+          <Heading
+            level={3}
+            as="h3"
+            className={styles.completeTitle}
+          >
+            Message Sent
+          </Heading>
+          <Text
+            size="l"
+            as="p"
+            className={styles.completeText}
+            style={getDelay(tokens.base.durationXS)}
+          >
+            I'll get back to you within a couple days, sit tight
+          </Text>
+          <Button
+            secondary
+            iconHoverShift
+            className={styles.completeButton}
+            style={getDelay(tokens.base.durationM)}
+            href="/"
+            icon="chevron-right"
+          >
+            Back to homepage
+          </Button>
+        </div>
+      )}
       <Footer className={styles.footer} />
     </Section>
   );
