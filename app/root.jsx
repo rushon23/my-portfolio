@@ -116,6 +116,28 @@ export default function App() {
         <Meta />
         <Links />
         <link rel="canonical" href={canonicalUrl} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Suhas Kembhavi",
+              "alternateName": "Suhas",
+              "url": "https://suhas.site",
+              "sameAs": [
+                "https://github.com/Suhassk205",
+                "https://www.linkedin.com/in/suhas-kembhavi/",
+                "https://www.youtube.com/@SuhasKembhavi"
+              ],
+              "jobTitle": "Developer and Designer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Self-Employed"
+              }
+            })
+          }}
+        />
       </head>
       <body data-theme={theme}>
         <ThemeProvider theme={theme} toggleTheme={toggleTheme}>

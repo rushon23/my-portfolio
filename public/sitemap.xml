@@ -1,38 +1,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://suhasw.com/</loc>
+    <loc>https://suhas.site/</loc>
     <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://suhasw.com/contact/</loc>
+    <loc>https://suhas.site/contact/</loc>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suhasw.com/articles/</loc>
+    <loc>https://suhas.site/articles/</loc>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://suhasw.com/uses/</loc>
+    <loc>https://suhas.site/uses/</loc>
     <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://suhasw.com/projects/slice/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://suhasw.com/projects/smart-sparrow/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://suhasw.com/projects/volkihar-knight/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://suhasw.com/articles/hello-world</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://suhasw.com/articles/modern-styling-in-react</loc>
-    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
