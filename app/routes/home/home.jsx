@@ -103,10 +103,10 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        title="High-Performance Typeahead Engine"
+        description="An in-memory prefix trie search autocomplete engine built with Bun and Elysia, featuring consistent hashing and a custom Write-Ahead Log."
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="https://github.com/Suhassk205/Typeahead"
         model={{
           type: 'laptop',
           alt: 'Smart Sparrow lesson builder',
@@ -124,10 +124,10 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://gamestack.suhas.site"
+        title="RAG NotebookLM"
+        description="An end-to-end RAG pipeline enabling grounded Q&A across dense PDFs without hallucinations, featuring a custom glassmorphic Next.js UI."
+        buttonText="View project"
+        buttonLink="https://github.com/Suhassk205/RAG-notebooklm"
         model={{
           type: 'phone',
           alt: 'App login screen',
@@ -148,10 +148,10 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        title="Persona Dashboard"
+        description="A real-time mentorship platform leveraging dynamic context-window management to seamlessly swap distinct AI mentor personas on the fly."
         buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonLink="https://github.com/Suhassk205/Persona-dashboard"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
