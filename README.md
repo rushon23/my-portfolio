@@ -3,9 +3,9 @@
 </p>
 <h1 align="center">Personal portfolio</h1>
 
-[![Site preview](/public/site-preview.png)](https://suhasw.com)
+[![Site preview](/public/site-preview.png)](https://suhas.site)
 
-My design portfolio to showcase a few projects. Built with [Remix](https://remix.run/), [Three.js](https://threejs.org/), and [Framer Motion](https://www.framer.com/motion/). View the [live site](https://suhasw.com) or check out a live version of the [components storybook](https://storybook.suhasw.com).
+My design portfolio to showcase a few projects. Built with [Remix](https://remix.run/), [Three.js](https://threejs.org/), and [Framer Motion](https://www.framer.com/motion/). View the [live site](https://suhas.site) or check out a live version of the [components storybook](https://storybook.suhas.site).
 
 ## Install & run
 
