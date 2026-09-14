@@ -10,6 +10,7 @@ import {
   useRouteError,
 } from '@remix-run/react';
 import { createCookieSessionStorage, json } from '@remix-run/node';
+import { Analytics } from "@vercel/analytics/remix";
 import { ThemeProvider, themeStyles } from '~/components/theme-provider';
 import GothamBook from '~/assets/fonts/gotham-book.woff2';
 import GothamMedium from '~/assets/fonts/gotham-medium.woff2';
@@ -134,6 +135,7 @@ export default function App() {
         </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
+        <Analytics />
       </body>
     </html>
   );
@@ -157,6 +159,7 @@ export function ErrorBoundary() {
         <Error error={error} />
         <ScrollRestoration />
         <Scripts />
+        <Analytics />
       </body>
     </html>
   );
